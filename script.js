@@ -1,7 +1,9 @@
-const scroll = new LocomotiveScroll({
-    el: document.querySelector(".main"),
-    smooth: true
-})
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector(".main"),
+//     smooth: true
+// })
+
+
 
 function navbar() {
     console.log('you clicked navbar menu')
@@ -191,6 +193,15 @@ function numberCounter() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    Shery.imageEffect(".header-img", {
+        style: 6,
+        // debug: true,
+        config:{"noiseDetail":{"value":7.44,"range":[0,100]},"distortionAmount":{"value":4.03,"range":[0,10]},"scale":{"value":36.36,"range":[0,100]},"speed":{"value":0.79,"range":[0,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":2.2420701168614356},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.52,"y":0.5}},"shapeEdgeSoftness":{"value":0.17,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":true},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":0.51,"range":[0.1,5]},"durationIn":{"value":0.47,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.76,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":1.22,"range":[0,10]},"metaball":{"value":0.21,"range":[0,2]},"discard_threshold":{"value":0.4,"range":[0,1]},"antialias_threshold":{"value":0.03,"range":[0,0.1]},"noise_height":{"value":0.32,"range":[0,2]},"noise_scale":{"value":16.03,"range":[0,100]},"a":{"value":2,"range":[0,30]},"b":{"value":-0.54,"range":[-1,1]}},
+        gooey: true,
+    })
+       
+    
     navbar();
     goToTop();
     scrollToTop();

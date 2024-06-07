@@ -7,11 +7,14 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <link rel="stylesheet"
+            href="https://unpkg.com/sheryjs/dist/Shery.css" />
         <link rel="stylesheet" href="style.css">
         <title>Himalaya Face</title>
     </head>
     <body>
+        <div class="bg-logo">
+        </div>
         <button class="goToTop" onclick="scrollToTop()">
             ^
         </button>
@@ -43,7 +46,7 @@
         <div class="main">
 
             <div class="header-container" data-scroll data-scroll-speed="3">
-                <div class="navbar">
+                <div class="navbar" style="margin-top:px;">
                     <div class="logo">
                         <a href="/">
                             <img src="logo.png" alt>
@@ -60,13 +63,13 @@
                             <li class="nav-list"><a href="#">Galary</a></li>
                             <li class="nav-list"><a
                                     href="/contact-us.html">Contact Us</a></li>
-                                    <div class="footer-address">
-                                        <p>
-                                            North Half Floor, 2nd Floor, ABC Business
-                                            Building, Thamel
-                                            Kathmandu, Bagmati 44600 Nepal
-                                        </p>
-                                    </div>
+                            <div class="footer-address">
+                                <p>
+                                    North Half Floor, 2nd Floor, ABC Business
+                                    Building, Thamel
+                                    Kathmandu, Bagmati 44600 Nepal
+                                </p>
+                            </div>
                         </ul>
                     </div>
                     <div class="nav-menu" data-target="close"
@@ -77,14 +80,28 @@
                 </div>
 
                 <div class="header">
-
+                    <div class="header-img">
+                        <img src="bg-img.jpg" alt>
+                        <img src="bg.svg" alt>
+                        <img src="ship.avif" alt>
+                    </div>
                     <div class="header-con">
                         <h1>Himalaya <span>Face</span></h1>
-                        <h3>From the motherland of
-                            <span>himalaya's</span>.</h3>
-                        <h2>Buy in <br> WholeSale <br> and sell in retail</h2>
-                        <p>Get <span>" ready to sell product "</span> with us
-                            and start your own <strong>business</strong>.</p>
+                        <h3>Where best trekking trouser's are manifactured.</h3>
+                        <a href="/about-us.html">
+                            <button>about us</button>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="header">
+                    <div class="new" id="new">
+                        <img src="bg-img.jpg" alt>
+                    </div> -->
+                <!-- <div class="header-img">
+                        <img src="bg-img.jpg" alt>
+                    </div> -->
+                <!-- <div class="header-con">
+                        <h1>BEST TREKKING SUITE</h1>
                         <div class="header-con-button">
                             <a href="/contact-us.html">
                                 <button>contact
@@ -95,16 +112,8 @@
                                     more</button>
                             </a>
                         </div>
-                    </div>
-                    <div class="header-img">
-                        <div class="header-img-slider">
-                            <img src="track1.png" alt>
-                            <img src="track2.png" alt>
-                            <img src="shirt.png" alt>
-                        </div>
-
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
 
             <div class="our-products" id="our-products" data-scroll
@@ -381,7 +390,7 @@
             </div>
 
             <footer data-scroll data-scroll-speed="2">
-                <div class="footer-container" >
+                <div class="footer-container">
                     <div class="footer-svg">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -447,10 +456,12 @@
                             <p>
                                 developed by Hang
                             </p>
-                            <a href="http://discordapp.com/users/1129262868685144135">
+                            <a
+                                href="http://discordapp.com/users/1129262868685144135">
                                 <i class="fa-brands fa-discord"></i>
                             </a>
-                            <a href="https://wa.me/+9779808695299" target="_blank">
+                            <a href="https://wa.me/+9779808695299"
+                                target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </a>
                         </div>
@@ -459,14 +470,23 @@
             </footer>
 
         </div>
+        <!--  Gsap is needed for Basic Effects -->
         <script
-            src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"></script>
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+        <!-- Scroll Trigger is needed for Scroll Effects -->
         <script
-            src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+        <!-- Three.js is needed for 3d Effects -->
         <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+        <!-- ControlKit is needed for Debug Panel -->
+        <script
+            src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+        <script type="text/javascript"
+            src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
